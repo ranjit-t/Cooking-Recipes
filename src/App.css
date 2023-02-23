@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+
+.nav-link {
+  margin: 10px;
+}
+.route-page {
+  margin-top: 50px;
+}
+.each-recipe {
+  background-color: white;
+  width: 300px;
+  height: auto;
+  border: 1px solid white;
+  box-shadow: 1px 1px 4px grey;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.5;
+}
+.each-recipe:hover {
+  transform: rotate(-2deg);
+}
+.all-recipes {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.each-recipe a {
+  background-color: #ca895f;
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px grey;
+}
+.each-recipe a:hover {
+  background-color: #815436;
+}
+.nav-bar {
+  background-color: #8c5f66;
+  padding: 20px;
+  color: white;
+}
+.nav-bar > * {
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.active {
+  background-color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #8c5f66;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 600px;
+  height: auto;
+  border: 1px solid white;
+  box-shadow: 1px 1px 4px grey;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form > * {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+label > * {
+  margin-top: 4px;
+}
+.btn {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.btn-add-recipe {
+  color: white;
+  background-color: #ca895f;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.btn-add-recipe:hover {
+  background-color: #8c5f66;
+}
+.btn-add-recipe:active {
+  background-color: grey;
+}
+textarea {
+  resize: vertical;
+}
+body {
+  background-color: antiquewhite;
+}
+
+.message {
+  background-color: aqua;
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
