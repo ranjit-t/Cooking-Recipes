@@ -2,8 +2,9 @@
 
 ## Technologies Used
 
+1. HTML
 1. CSS
-2. React
+1. React
 
 ## How to Run this project
 
