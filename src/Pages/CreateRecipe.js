@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
-
+import React, { useState, useContext, useEffect } from "react";
 import { UserContext } from "../Context/Context";
 
 export default function CreateRecipe() {
@@ -11,6 +10,24 @@ export default function CreateRecipe() {
   const [newIngredient, setNewIngredient] = useState([]);
   const [method, setMethod] = useState("");
   const [message, setMessage] = useState("");
+  //inital storage
+  function getlocalRecipes() {
+    let localRecipes;
+    if (localStorage.getItem("localRecipes") === null) {
+      localRecipes = [...recipes];
+    } else {
+      localRecipes = JSON.parse(localStorage.getItem("localRecipes"));
+    }
+
+    return localRecipes;
+  }
+
+  let localRecipes = getlocalRecipes();
+
+  function addToStorage(recipe) {
+    localRecipes.push(recipe);
+    localStorage.setItem("localRecipes", JSON.stringify(localRecipes));
+  }
 
   return (
     <div>
@@ -24,7 +41,7 @@ export default function CreateRecipe() {
               cookingTime: `${cookingTime} minutes`,
               ingredients: [...ingredients, newIngredient],
               method: method,
-              id: Math.floor(Math.random() * 9999),
+              id: Math.floor(Math.random() * 9999).toString(),
             };
             if (
               title &&
@@ -32,7 +49,8 @@ export default function CreateRecipe() {
               (ingredients || newIngredient) &&
               method
             ) {
-              setRecipes([...recipes, recipe]);
+              addToStorage(recipe);
+
               setTitle("");
               setCookingTime("");
               setIngredients([]);

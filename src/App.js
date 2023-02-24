@@ -4,11 +4,12 @@ import AllRecipes from "./Pages/AllRecipes";
 import CreateRecipe from "./Pages/CreateRecipe";
 import { UserContext } from "./Context/Context";
 import React, { useState } from "react";
+import RecipeCard from "./Pages/RecipeCard";
 
 function App() {
   let [recipes, setRecipes] = useState([
     {
-      id: 1,
+      id: "1",
       title: "Veggie Stew",
       ingredients: ["1 Carrot", "1 Leek", "200g Tofu", "300ml Veg stock"],
       method:
@@ -85,6 +86,14 @@ function App() {
               element={
                 <div className="route-page">
                   <CreateRecipe />
+                </div>
+              }
+            />
+            <Route
+              path="/recipes/:id"
+              element={
+                <div className="route-page">
+                  <RecipeCard />
                 </div>
               }
             />
