@@ -11,4 +11,3 @@
 1. Download the zip file from github.
 2. just add the node modules folder to the project or install dependencies.
 3. run ( npm start ) command and there you go!
-4. Here is the URL
