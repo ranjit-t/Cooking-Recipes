@@ -10,7 +10,7 @@ export default function CreateRecipe() {
   const [newIngredient, setNewIngredient] = useState([]);
   const [method, setMethod] = useState("");
   const [message, setMessage] = useState("");
-  //inital storage
+  //i storage
   function getlocalRecipes() {
     let localRecipes;
     if (localStorage.getItem("localRecipes") === null) {

@@ -87,7 +87,7 @@ export default function AllRecipes() {
           })}
         </div>
       ) : (
-        <div>Nothing Found</div>
+        <div>Nothing Found, Add Recipes!</div>
       )}
     </div>
   );
